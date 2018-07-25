@@ -1,0 +1,31 @@
+﻿<ContentDialog
+    x:Class="_357.Instructions"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_357"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="帮助"
+    SecondaryButtonText="好"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick" FontWeight="Normal">
+
+    <Grid>
+        <ScrollViewer>
+            <Grid Padding="0,0,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock VerticalAlignment="Stretch" Grid.Row="0" FontSize="14" Text="关于游戏"/>
+                <TextBlock VerticalAlignment="Stretch" Grid.Row="1" Text="游戏共有3个板块，每个玩家每次只能在任意一个板块内进行消除操作，消除最后一个方块的玩家输。" FontSize="11" TextWrapping="WrapWholeWords"/>
+                <TextBlock Grid.Row="3" FontSize="14" Text="关于软件"/>
+                <TextBlock Grid.Row="4" Text="软件内共有两种游戏模式：'AI模式'和'A,B玩家'模式。您必须要在软件主页面右上角选择其中的一种后才可以操作'新开局'按钮开始游戏。如若您要结束游戏，请操作底部菜单栏的'终止'按钮。" FontSize="11" TextWrapping="WrapWholeWords"/>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</ContentDialog>
