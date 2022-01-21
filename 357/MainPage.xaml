@@ -8,20 +8,7 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
 
-    <Page.Resources>
-        <AcrylicBrush x:Key="MyAcrylicBrush"
-                      BackgroundSource="HostBackdrop"
-                      TintColor="#FFFFFFFF"
-                      TintOpacity="0.3" TintTransitionDuration="1"
-                      FallbackColor="White"/>
-        <AcrylicBrush x:Key="MyAcrylicBrushP"
-                      BackgroundSource="Backdrop"
-                      TintColor="#FFFFFFFF"
-                      TintOpacity="0.6" TintTransitionDuration="1"
-                      FallbackColor="White"/>
-    </Page.Resources>
-
-    <Grid Background="{StaticResource MyAcrylicBrush}">
+    <Grid Background="{ThemeResource AcrylicBackgroundFillColorDefaultBrush}">
         <CommandBar IsOpen="True" DefaultLabelPosition="Bottom" VerticalAlignment="Bottom" Background="{ThemeResource SystemControlAcrylicWindowBrush}" Margin="0,0,-0.003,0">
             <AppBarButton x:Name="NewGameButton" Icon="Add" Label="开新局" Click="NewGameButton_Click"/>
             <AppBarButton x:Name="EndGameButton" Icon="Clear" Label="终止" Click="EndGameButton_Click"/>
@@ -36,7 +23,7 @@
             <AppBarButton x:Name="HelpButton" Icon="Help" Label="帮助" Click="HelpButton_Click"/>
         </CommandBar>
 
-        <CommandBar Background="{ThemeResource SystemControlAcrylicElementBrush}" IsOpen="False" DefaultLabelPosition="Right" HorizontalAlignment="Left" Margin="10,35,0,0">
+        <CommandBar Background="Transparent" IsOpen="False" DefaultLabelPosition="Right" HorizontalAlignment="Left" Margin="10,35,0,0">
             <AppBarButton x:Name="ConfirmButton" Icon="Accept" Label="确认" IsEnabled="False" Click="ConfirmButton_Click"/>
             <AppBarSeparator/>
             <AppBarToggleButton x:Name="FirstButton" Label="1" IsEnabled="False" Click="FirstButton_Click"/>
@@ -51,7 +38,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <CommandBar Background="{ThemeResource SystemControlAcrylicElementBrush}" DefaultLabelPosition="Right">
+            <CommandBar Background="Transparent" DefaultLabelPosition="Right">
                 <AppBarToggleButton x:Name="PlayerAButton" Icon="Contact" Label="玩家A" Visibility="Collapsed"/>
                 <AppBarToggleButton x:Name="PlayerAIButton" Icon="Contact2" Label="AI" Click="PlayerAIButton_Click"/>
                 <AppBarToggleButton x:Name="PlayerBButton" Icon="Contact" Label="玩家B" Click="PlayerBButton_Click"/>
@@ -78,21 +65,21 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <!--B1-->
-            <Rectangle x:Name="B1" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" Fill="{ThemeResource SystemControlAcrylicElementBrush}"/>
+            <Rectangle x:Name="B1" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" Fill="{ThemeResource SystemControlAcrylicElementBrush}" RadiusX="6" RadiusY="6"/>
             <ToggleButton x:Name="G101" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="G101_Click"/>
             <ToggleButton x:Name="G102" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="G102_Click"/>
             <ToggleButton x:Name="G103" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="G103_Click"/>
-            <Rectangle x:Name="P1" Visibility="Collapsed" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" Fill="#66000000"/>
+            <Rectangle x:Name="P1" Visibility="Collapsed" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" Fill="#66000000" RadiusX="6" RadiusY="6"/>
             <!--B2-->
-            <Rectangle x:Name="B2" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="2" Fill="{ThemeResource SystemControlAcrylicElementBrush}"/>
+            <Rectangle x:Name="B2" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="2" Fill="{ThemeResource SystemControlAcrylicElementBrush}" RadiusX="6" RadiusY="6"/>
             <ToggleButton x:Name="G201" Grid.Column="3" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="G201_Click"/>
             <ToggleButton x:Name="G202" Grid.Column="4" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="G202_Click"/>
             <ToggleButton x:Name="G203" Grid.Column="5" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="G203_Click"/>
             <ToggleButton x:Name="G204" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="G204_Click"/>
             <ToggleButton x:Name="G205" Grid.Column="4" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="G205_Click"/>
-            <Rectangle x:Name="P2" Visibility="Collapsed" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="2" Fill="#66000000"/>
+            <Rectangle x:Name="P2" Visibility="Collapsed" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="2" Fill="#66000000" RadiusX="6" RadiusY="6"/>
             <!--B3-->
-            <Rectangle x:Name="B3" Grid.Column="7" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Fill="{ThemeResource SystemControlAcrylicElementBrush}"/>
+            <Rectangle x:Name="B3" Grid.Column="7" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Fill="{ThemeResource SystemControlAcrylicElementBrush}" RadiusX="6" RadiusY="6"/>
             <ToggleButton x:Name="G301" Grid.Column="7" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="G301_Click"/>
             <ToggleButton x:Name="G302" Grid.Column="8" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="G302_Click"/>
             <ToggleButton x:Name="G303" Grid.Column="9" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="G303_Click"/>
@@ -100,7 +87,7 @@
             <ToggleButton x:Name="G305" Grid.Column="7" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="G305_Click"/>
             <ToggleButton x:Name="G306" Grid.Column="8" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="G306_Click"/>
             <ToggleButton x:Name="G307" Grid.Column="9" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="G307_Click"/>
-            <Rectangle x:Name="P3" Visibility="Collapsed" Grid.Column="7" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Fill="#66000000"/>
+            <Rectangle x:Name="P3" Visibility="Collapsed" Grid.Column="7" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Fill="#66000000" RadiusX="6" RadiusY="6"/>
         </Grid>
     </Grid>
 </Page>
